@@ -1,0 +1,21 @@
+CREATE DATABASE SchneiderMiniProject2;
+
+SHOW DATABASES;
+
+USE SchneiderMiniProject2;
+
+CREATE TABLE Celebs(
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(31) NOT NULL,
+  url VARCHAR(255),
+  PRIMARY KEY (id)
+);
+
+describe Celebs;
+
+LOAD DATA LOCAL INFILE 'c:/xampp/htdocs/SchneiderCJP_MProject2/celeb data.csv' 
+  INTO TABLE celebs FIELDS TERMINATED BY ',';
+
+SELECT * from celebs;
+
+SELECT name from celebs;
